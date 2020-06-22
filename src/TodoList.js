@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 import Todo from './Todo';
+import NewTodoForm from './NewTodoForm';
 
 class TodoList extends Component {
   constructor(props) {
     super(props);
-    this.state = {todos: [{task: "clean"}, {task: "cook"}] }
+    this.state = {todos: [] }
+    this.create = this.create.bind(this);
+  }
+  create(newTask) {
+    this.setState({
+      todos: [...this.state.todos, newTask]
+    });
   }
 
   render() {
@@ -14,6 +21,7 @@ class TodoList extends Component {
     return(
       <div>
         <h1>Task Manager</h1>
+        <NewTodoForm createTask={this.create}/>
         {todos}
       </div>
     )
