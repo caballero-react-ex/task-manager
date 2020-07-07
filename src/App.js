@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './App.scss';
+// import './App.scss';
 
 import TodoList from './02_comps/TodoList';
 import Header from './02_comps/Header';
