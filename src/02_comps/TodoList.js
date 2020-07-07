@@ -57,7 +57,7 @@ class TodoList extends Component {
       />;
     })
     return(
-      <div className="TodoList grid-item">
+      <div className="TodoList">
         <NewTodoForm createTask={this.create}/>
         {todos}
       </div>
