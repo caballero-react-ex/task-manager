@@ -3,7 +3,8 @@
 @import "./01_base/mixins";
 @import "./01_base/reset";
 
-// Components
+// Components 
+@import './App.scss';
 @import "./02_comps/Header";
 @import "./02_comps/TodoList";
 

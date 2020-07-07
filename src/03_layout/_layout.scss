@@ -1,35 +1,50 @@
+// .main-grid {
+//   // margin: 0 auto;
+//   // text-align: center;
+//   display: grid;
+//   grid-template-columns:
+//   [full-start] 3rem
+//   [content-start] 1fr
+//   [content-end] 3rem [full-end];
+
+//   // width: 100%;
+//   background-color: red;
+
+//   @include respond(tablet) { 
+//     margin-top: 2rem;
+//     // margin-left: 10rem;
+//     // margin-right: 10rem;
+//     grid-template-columns:
+//       [full-start] 10rem
+//       [content-start] 60rem 
+//       [content-end] 10rem [full-end];
+
+//       // width: 80%;
+//       background-color: blue;
+//   }
+
+  // @include respond(desktop) { 
+  //   margin-top: 2rem;
+  //   // margin-left: 10rem;
+  //   // margin-right: 10rem;
+  //   grid-template-columns:
+  //     [full-start] 1fr
+  //     [content-start] 60rem 
+  //     [content-end] 1fr [full-end];
+  // }
+// }
+
+// .grid-item {
+//   grid-column: content-start / content-end;
+//   background-color: $color-white;
+//   padding: 2rem;
+// }
+
 .main-grid {
-  // margin: 0 auto;
   // text-align: center;
-  display: grid;
-  grid-template-columns:
-  [full-start] 3rem
-  [content-start] 1fr
-  [content-end] 3rem [full-end];
-
-  @include respond(tablet) { 
-    margin-top: 2rem;
-    // margin-left: 10rem;
-    // margin-right: 10rem;
-    grid-template-columns:
-      [full-start] 3rem
-      [content-start] 60rem 
-      [content-end] 3rem [full-end];
-  }
-
-  @include respond(desktop) { 
-    margin-top: 2rem;
-    // margin-left: 10rem;
-    // margin-right: 10rem;
-    grid-template-columns:
-      [full-start] 1fr
-      [content-start] 60rem 
-      [content-end] 1fr [full-end];
-  }
 }
 
 .grid-item {
-  grid-column: content-start / content-end;
-  background-color: $color-white;
-  padding: 2rem;
+  // display: block;
 }
+
