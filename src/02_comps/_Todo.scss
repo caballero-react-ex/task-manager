@@ -1,0 +1,83 @@
+.Todo-item {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  list-style-type: none;
+
+  &:first-of-type { margin-top: 5rem; }
+}
+
+.item-container {
+  display: flex;
+  align-items: center;
+
+}
+
+
+
+.Todo-completed {
+  // margin-right: auto;
+  color: $color-green;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.Todo-task {
+  font-size: 1.8;
+}
+
+.li-bg {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  background-color: $color-light-grey;
+  height: 5rem;
+  width: 80%;
+  border-radius: 5rem;
+  padding-left: 2rem;
+  cursor: pointer;
+}
+
+.li-bg-comp {
+  background-color: $color-bg-green;
+}
+
+.item-icon { margin-right: .8rem; }
+
+.item-icon-comp { color: $color-green; }
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  height: 5rem;
+  width: 5rem;
+  margin-left: 1rem;
+  border-radius: 50%;
+  font-weight: 100;
+  font-size: 4rem;
+  color: $color-white;
+  outline:none;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(.97);
+  }
+}
+
+.Todo-edit-btn {
+  background-color: $color-yellow;
+
+  &:active {
+    background-color: $color-dark-yellow;
+  }
+}
+
+.Todo-del-btn {
+  background-color: $color-red;
+
+  &:active {
+    background-color: $color-dark-red;
+  }
+}
+
