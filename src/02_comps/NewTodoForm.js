@@ -32,7 +32,7 @@ class NewTodoForm extends Component {
           value={this.state.task}
           onChange={this.handleChange}
         />
-        <button className="task-form-btn">+</button>
+        <button className="btn task-form-btn"><span className="material-icons">add</span></button>
       </form>
     )
   }

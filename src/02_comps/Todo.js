@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Todo.css';
+// import './Todo.css';
 
 class Todo extends Component { 
   constructor(props) {
@@ -40,6 +40,9 @@ class Todo extends Component {
   }
 
   render() {
+    const icon = this.props.completed ? "check_circle" : "panorama_fish_eye";
+    const liClass = this.props.completed ? "li-bg-comp li-bg" : "li-bg";
+    const iconClass = this.props.completed ? "material-icons item-icon-comp item-icon" : "material-icons item-icon";
     let result;
     if(this.state.isEditing) {
       result = (
@@ -58,13 +61,18 @@ class Todo extends Component {
       )
     } else {
       result = (
-        <div>
-        <button onClick={this.toggleForm}>Edit</button>
-        <button onClick={this.handleDelete}>X</button>
-        <li className={this.props.completed ? "completed" : ""} onClick={this.handleToggle} > 
-          {this.props.task}
-        </li>
-      </div>
+        <ul className="Todo-item">
+          <div className="item-container">
+            <div className={liClass} onClick={this.handleToggle}>
+              <span className={iconClass}>{icon}</span>
+              <li className={this.props.completed ? "Todo-completed" : ""} > 
+                {this.props.task}
+              </li>
+            </div>
+            <button className="btn Todo-edit-btn" onClick={this.toggleForm}><span className="material-icons">create</span></button>
+            <button className="btn Todo-del-btn" onClick={this.handleDelete}><span className="material-icons">clear</span></button>
+          </div>
+        </ul>
       )
     }
     return result
