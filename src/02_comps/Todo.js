@@ -58,6 +58,7 @@ class Todo extends Component {
               name="task"
               id="edit-task"
               autoFocus="autofocus" 
+              maxLength="35"
               onChange={this.handleChange}
             />
             <button className="btn edit-btn"><span className="material-icons">done</span></button>
@@ -75,9 +76,9 @@ class Todo extends Component {
                 {this.props.task}
               </li>
             </div>
-            <button className="btn Todo-edit-btn" onClick={this.toggleForm}><span className="material-icons">create</span></button>
-            <button className="btn Todo-del-btn" onClick={this.handleDelete}><span className="material-icons">clear</span></button>
           </div>
+          <button className="btn Todo-edit-btn" onClick={this.toggleForm}><span className="material-icons">create</span></button>
+          <button className="btn Todo-del-btn" onClick={this.handleDelete}><span className="material-icons">clear</span></button>
         </ul>
       )
     }

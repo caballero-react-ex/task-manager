@@ -13,6 +13,8 @@ class TodoList extends Component {
     this.update = this.update.bind(this);
     this.toggleCompletion = this.toggleCompletion.bind(this);
     this.getCompletedTodos = this.getCompletedTodos.bind(this);
+    this.toggleAllCompletion = this.toggleAllCompletion.bind(this);
+    this.handleCompleted = this.handleCompleted.bind(this);
   }
 
   create(newTask) {
@@ -47,9 +49,22 @@ class TodoList extends Component {
     this.setState({todos: updatedTodos});
   }
 
-  // toggleAllCompletion() {
-  //   const updatedAllTodos = todos
-  // }
+  toggleAllCompletion() {
+    const updatedAllTodos = this.state.todos.map( todo => {
+      if(todo.completed === false) {
+        return {...todo, completed: true}
+      } else {
+        return {...todo, completed: false}
+      }
+        
+    })
+    this.setState({todos: updatedAllTodos})
+  }
+
+  handleCompleted() {
+    this.toggleAllCompletion();
+    // alert("works");
+  }
 
   getCompletedTodos() {
     let totalCompletedArr = [];
@@ -76,35 +91,19 @@ class TodoList extends Component {
 
     const totalTodos = todos.length;
 
-    
-    
-    
-    
-    // const updatedTodos = this.state.todos.map( todo => {
-    //   if(todo.id === id) {
-    //     return {...todo, completed: !todo.completed}
-    //   } 
-    //   return todo;
-    // })
-
     return(
       <div className="TodoList">
         <NewTodoForm createTask={this.create}/>
         {todos}
+        {/* <button onClick={this.handleCompleted}>All completed</button> */}
         <Footer 
         allCompleted={this.getCompletedTodos()}
         totalTodos={totalTodos}
         />
+        
       </div>
     )
   }
 }
-
-// task={todo.task} 
-//       key={todo.id}
-//       id={todo.id}
-//       completed={todo.completed}
-//       deleteTask={this.delete}
-//       updateTask={this.update}
 
 export default TodoList; 
