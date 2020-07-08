@@ -11,9 +11,20 @@ class NewTodoForm extends Component {
 
   handleSubmit(event){
     event.preventDefault();
-    let newTask = {...this.state, id: uuidv4(), completed: false}
-    this.props.createTask(newTask);
-    this.setState({task: ""});
+
+    
+    if (this.state.task === "") {
+      console.log("task is empty!")
+      // this.setState({task: "Please write a task"});
+      // alert("please write a task");
+      
+    } else {
+      let newTask = {...this.state, id: uuidv4(), completed: false}
+      this.props.createTask(newTask);
+      this.setState({task: ""});
+    }
+
+    document.getElementById("task").focus();
   }
 
   handleChange(event) {
@@ -26,7 +37,10 @@ class NewTodoForm extends Component {
     return (
       <form className="task-form" onSubmit={this.handleSubmit}>
         <label htmlFor="task"></label>
-        <input type="text" placeholder="new task"
+        <input 
+          type="text" 
+          placeholder="new task"
+          autoFocus="autofocus" 
           id="task"
           name="task"
           value={this.state.task}

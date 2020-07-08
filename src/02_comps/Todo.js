@@ -25,6 +25,7 @@ class Todo extends Component {
     event.preventDefault();
     this.props.updateTask(this.props.id, this.state.task);
     this.setState({isEditing: false});
+    document.getElementById("task").focus();
   }
 
   toggleForm() {
@@ -55,9 +56,10 @@ class Todo extends Component {
               type="text"
               value={this.state.task}
               name="task"
+              id="edit-task"
+              autoFocus="autofocus" 
               onChange={this.handleChange}
             />
-            {/* <button>Save</button> */}
             <button className="btn edit-btn"><span className="material-icons">done</span></button>
           </form>
           
