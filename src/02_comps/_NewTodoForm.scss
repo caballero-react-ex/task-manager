@@ -1,25 +1,24 @@
 .task-form {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: [col1] 1fr [col2] 6rem;
   margin-bottom: 5rem;
 
   & input {
+  grid-column: col1 / col2;
   display: block;
   height: 5rem;
-  width: 88%;
+  width: 100%;
   margin-right: auto;
   padding-left: 2rem;
   border: none;
   background-color: $color-light-grey;
   border-radius: 5rem;
   color: $color-black;
-  // color: blue;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 1.8rem;
   }
-
-  // & ::placeholder { color:$color-dark-grey; }
 
   & :focus { outline:none; }
 }

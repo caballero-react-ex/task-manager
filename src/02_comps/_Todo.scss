@@ -1,11 +1,13 @@
 .Todo-item {
+  display: grid;
+  grid-template-columns: [col1] 1fr [col2] 6rem [col3] 6rem;
   margin-top: 2rem;
   font-size: 1.8rem;
   list-style-type: none;
-  // &:first-of-type { margin-top: 5rem; }
 }
 
 .Todo-task-container {
+  grid-column: col1 / col2;
   display: flex;
   align-items: center;
 }
@@ -22,7 +24,7 @@
   margin-right: auto;
   background-color: $color-light-grey;
   height: 5rem;
-  width: 38rem;
+  width: 100%;
   border-radius: 5rem;
   padding-left: 2rem;
   cursor: pointer;
@@ -89,13 +91,16 @@
 }
 
 .Todo-edit-form {
-  display: flex;
+  display: grid;
+  grid-template-columns: [col1] 1fr [col2] 6rem [col3] 6rem;
+  // display: flex;
   align-items: center;
 }
 
 .Todo-edit-form--input {
+  grid-column: col1 / col2;
   height: 5rem;
-  width: 38rem;
+  width: 100%;
   padding-left: 2rem;
   font-family: "Roboto", sans-serif;
   font-weight: 300;

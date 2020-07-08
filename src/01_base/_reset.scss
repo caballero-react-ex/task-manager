@@ -15,9 +15,13 @@ html {
   font-weight: 300;
   box-sizing: border-box;
 }
-::selection {
-  // background: $color-primary;
-  // color: $color-white;
+
+body {
+  background-color: $color-white;
+
+  @include respond(tablet) {
+    background-color: $color-dark-grey;
+  }
 }
 
 
