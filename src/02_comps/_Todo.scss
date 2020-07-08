@@ -2,48 +2,47 @@
   margin-top: 2rem;
   font-size: 1.8rem;
   list-style-type: none;
-
-  &:first-of-type { margin-top: 5rem; }
+  // &:first-of-type { margin-top: 5rem; }
 }
 
-.item-container {
+.Todo-task-container {
   display: flex;
   align-items: center;
-
 }
 
-
-
-.Todo-completed {
-  // margin-right: auto;
+.Todo-task-completed {
   color: $color-green;
   text-decoration: line-through;
   cursor: pointer;
 }
 
-.Todo-task {
-  font-size: 1.8;
-}
-
-.li-bg {
+.task-bg {
   display: flex;
   align-items: center;
   margin-right: auto;
   background-color: $color-light-grey;
   height: 5rem;
-  width: 80%;
+  width: 38rem;
   border-radius: 5rem;
   padding-left: 2rem;
   cursor: pointer;
+  border: 1px solid $color-light-grey;
 }
 
-.li-bg-comp {
+.task-bg-comp {
   background-color: $color-bg-green;
+  border: 1px solid $color-bg-green;
 }
 
-.item-icon { margin-right: .8rem; }
+.task-icon { 
+  margin-right: .8rem; 
+  user-select: none; 
+}
 
-.item-icon-comp { color: $color-green; }
+.task-icon-comp { 
+  color: $color-green;
+  user-select: none; 
+}
 
 .btn {
   display: inline-flex;
@@ -52,13 +51,15 @@
   border: none;
   height: 5rem;
   width: 5rem;
+  // width: 15%;
   margin-left: 1rem;
-  border-radius: 50%;
+  border-radius: 50rem;
   font-weight: 100;
   font-size: 4rem;
   color: $color-white;
   outline:none;
   cursor: pointer;
+  user-select: none; 
 
   &:active {
     transform: scale(.97);
@@ -81,3 +82,34 @@
   }
 }
 
+//// EDIT 
+
+.Todo-item-edit { 
+  margin-top: 2rem;
+}
+
+.Todo-edit-form {
+  display: flex;
+  align-items: center;
+}
+
+.Todo-edit-form--input {
+  height: 5rem;
+  width: 38rem;
+  padding-left: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: $color-dark-grey-2;
+  border-radius: 5rem;
+  border: 1px solid $color-dark-grey;
+  outline:none; 
+}
+
+.edit-btn {
+  background-color: $color-dark-grey;
+  
+  &:active {
+    background-color: $color-dark-grey;
+  }
+}

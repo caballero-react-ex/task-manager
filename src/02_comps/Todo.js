@@ -40,21 +40,25 @@ class Todo extends Component {
   }
 
   render() {
-    const icon = this.props.completed ? "check_circle" : "panorama_fish_eye";
-    const liClass = this.props.completed ? "li-bg-comp li-bg" : "li-bg";
-    const iconClass = this.props.completed ? "material-icons item-icon-comp item-icon" : "material-icons item-icon";
     let result;
+
+    const icon = this.props.completed ? "check_circle" : "panorama_fish_eye";
+    const taskClass = this.props.completed ? "task-bg-comp task-bg" : "task-bg";
+    const iconClass = this.props.completed ? "material-icons task-icon-comp task-icon" : "material-icons task-icon";
+    
     if(this.state.isEditing) {
       result = (
-        <div>
-          <form onSubmit={this.handleUpdate}>
+        <div className="Todo-item-edit">
+          <form className="Todo-edit-form" onSubmit={this.handleUpdate}>
             <input 
+              className="Todo-edit-form--input"
               type="text"
               value={this.state.task}
               name="task"
               onChange={this.handleChange}
             />
-            <button>Save</button>
+            {/* <button>Save</button> */}
+            <button className="btn edit-btn"><span className="material-icons">done</span></button>
           </form>
           
         </div>
@@ -62,10 +66,10 @@ class Todo extends Component {
     } else {
       result = (
         <ul className="Todo-item">
-          <div className="item-container">
-            <div className={liClass} onClick={this.handleToggle}>
+          <div className="Todo-task-container">
+            <div className={taskClass} onClick={this.handleToggle}>
               <span className={iconClass}>{icon}</span>
-              <li className={this.props.completed ? "Todo-completed" : ""} > 
+              <li className={this.props.completed ? "Todo-task-completed" : ""} > 
                 {this.props.task}
               </li>
             </div>
