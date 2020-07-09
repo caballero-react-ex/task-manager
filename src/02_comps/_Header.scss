@@ -17,6 +17,7 @@
 .Header-title {
   font-size: 2rem;
   margin-top: 1.1rem;
+  font-weight: 400;
 
   @include respond(tablet-small) { 
     margin-top: 1.35rem;
