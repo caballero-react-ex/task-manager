@@ -3,7 +3,6 @@ import './main.scss';
 
 import Header from './02_comps/Header';
 import TodoList from './02_comps/TodoList';
-// import Footer from './02_comps/Footer';
 
 function App() {
   return (

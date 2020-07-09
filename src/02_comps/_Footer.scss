@@ -1,15 +1,13 @@
 .Footer-container {
   margin-top: 5rem;
+  padding-top: 2rem;
   border-top: 1px solid $color-grey;
-  // @include respond(tablet-small) {
-  //   border-top: 2px solid $color-grey;
-  // }
 }
 
 .Footer-title {
-  margin-top: 1rem;
+  margin-top: 2rem;
   font-size: 1.8rem;
-  font-weight: 300;
+  font-weight: 400;
   text-align: right;
   @include respond(tablet-small) {
     font-size: 2rem;

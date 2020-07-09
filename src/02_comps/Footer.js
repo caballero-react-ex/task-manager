@@ -1,13 +1,26 @@
 import React, { Component } from 'react';
 
+import SwitchBtn from './SwitchBtn';
+
 class Footer extends Component { 
+  constructor(props) {
+    super(props);
+    this.getToggleAllComplete = this.getToggleAllComplete.bind(this);
+  }
+
+  getToggleAllComplete() {
+    this.props.toggleAllComplete();
+  }
+
   render() {
 
-    // const test = this.props.completed ? console.log("completed") : console.log("not completed");
-    // const test2 = console.log(this.props.completed);
     return (
       <div className="Footer-container">
-        <h3 className="Footer-title">Completed {this.props.allCompleted}/{this.props.totalTodos} </h3>
+        <SwitchBtn
+        getToggle={this.getToggleAllComplete}
+        />
+         
+        <h3 className="Footer-title">Completed {this.props.allCompleted()}/{this.props.totalTodos} </h3>
       </div>
       
     )
