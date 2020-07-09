@@ -1,20 +1,29 @@
 .App {
-  padding-top: 3rem;
-  padding-bottom: 5rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  //width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 1.5rem;
+  padding-bottom: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   background-color: $color-white;
+
+  @include respond(tablet-small) {
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 
   @include respond(tablet) {
     width: 60rem;
-    margin-top: 5rem;
+    margin-top: 4rem;
     margin-bottom: 5rem;
     padding-left: 5rem;
     padding-right: 5rem;
-    border-radius: 5px;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
   }
 }
 

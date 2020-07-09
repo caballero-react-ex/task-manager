@@ -1,12 +1,17 @@
 .Footer-container {
   margin-top: 5rem;
-  border-top: 2px solid $color-grey;
+  border-top: 1px solid $color-grey;
+  // @include respond(tablet-small) {
+  //   border-top: 2px solid $color-grey;
+  // }
 }
 
 .Footer-title {
-  // margin-left: 2rem;
-  margin-top: 2rem;
-  font-size: 2rem;
+  margin-top: 1rem;
+  font-size: 1.8rem;
   font-weight: 300;
   text-align: right;
+  @include respond(tablet-small) {
+    font-size: 2rem;
+  }
 }
