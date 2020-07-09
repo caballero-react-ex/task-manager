@@ -40,7 +40,7 @@ class NewTodoForm extends Component {
           value={this.state.task}
           onChange={this.handleChange}
         />
-        <button className="btn task-form-btn"><span className="material-icons">add</span></button>
+        <button className="btn task-form-btn"><span className="material-icons add-icon">add</span></button>
       </form>
     )
   }

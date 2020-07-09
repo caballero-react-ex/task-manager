@@ -50,9 +50,9 @@ class Todo extends Component {
     if(this.state.isEditing) {
       result = (
         <div className="Todo-item-edit">
-          <form className="Todo-edit-form" onSubmit={this.handleUpdate}>
+          <form className="Todo-item-edit-form" onSubmit={this.handleUpdate}>
             <input 
-              className="Todo-edit-form--input"
+              className="Todo-item-edit-form--input"
               type="text"
               value={this.state.task}
               name="task"
@@ -61,7 +61,7 @@ class Todo extends Component {
               maxLength="35"
               onChange={this.handleChange}
             />
-            <button className="btn edit-btn"><span className="material-icons">done</span></button>
+            <button className="btn edit-btn"><span className="material-icons btn-icon">done</span></button>
           </form>
           
         </div>
@@ -77,8 +77,12 @@ class Todo extends Component {
               </li>
             </div>
           </div>
-          <button className="btn Todo-edit-btn" onClick={this.toggleForm}><span className="material-icons">create</span></button>
-          <button className="btn Todo-del-btn" onClick={this.handleDelete}><span className="material-icons">clear</span></button>
+          <button className="btn Todo-edit-btn" onClick={this.toggleForm}>
+            <span className="material-icons btn-icon">create</span>
+          </button>
+          <button className="btn Todo-del-btn" onClick={this.handleDelete}>
+            <span className="material-icons btn-icon">clear</span>
+          </button>
         </ul>
       )
     }

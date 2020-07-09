@@ -7,10 +7,8 @@ class Header extends Component {
         <h1 className="Header-logo">Tamago</h1>
         <h2 className="Header-title">Task Manager</h2>
       </div>
-      
     )
   }
 }
-
 
 export default Header; 

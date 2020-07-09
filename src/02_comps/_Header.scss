@@ -3,20 +3,23 @@
 .Header-container {
   display: flex;
   align-items: center;
-  // justify-content: center;
   color: $color-black;
-  // background-color: red;
 }
 
 .Header-logo {
   margin-right: 1.5rem;
   font-family: 'Pacifico', cursive;
-  font-size: 4rem;
+  font-size: 3.5rem;
+
+  @include respond(tablet-small) { font-size: 4rem; }
 }
 
 .Header-title {
-  font-size: 2.5rem;
-  // line-height: 20px;
-  margin-top: 1.35rem;
+  font-size: 2rem;
+  margin-top: 1.1rem;
+
+  @include respond(tablet-small) { 
+    margin-top: 1.35rem;
+    font-size: 2.5rem; }
 }
 

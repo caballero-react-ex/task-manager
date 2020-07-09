@@ -1,26 +1,37 @@
 .task-form {
   width: 100%;
   display: grid;
-  grid-template-columns: [col1] 1fr [col2] 6rem;
+  grid-template-columns: [col1] 1fr [col2] 4rem;
+  grid-column-gap: .5rem;
+
+  @include respond(tablet-small) {
+    grid-template-columns: [col1] 1fr [col2] 5rem;
+    grid-column-gap: 1rem;
+  }
   margin-bottom: 5rem;
 
-  & input {
+    & :focus { outline:none; }
+}
+
+.task-form input {
   grid-column: col1 / col2;
   display: block;
-  height: 5rem;
+  height: 4rem;
   width: 100%;
   margin-right: auto;
-  padding-left: 2rem;
+  padding-left: 1.8rem;
   border: none;
   background-color: $color-light-grey;
   border-radius: 5rem;
   color: $color-black;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 1.8rem;
-  }
+  font-size: 1.6rem;
 
-  & :focus { outline:none; }
+  @include respond(tablet-small) { 
+    height: 5rem;
+    font-size: 1.8rem;
+  }
 }
 
 
@@ -29,5 +40,12 @@
   
   &:active {
     background-color: $color-dark-green;
+  }
+}
+
+.add-icon {
+  font-size: 2.4rem;
+  @include respond(tablet-small) { 
+    font-size: 2.8rem;
   }
 }
